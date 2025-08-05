@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Section</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #e8e4f3 0%, #f5f3ff 50%, #ffffff 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: 600;
+            color: #4a5568;
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        .clock-container {
+            display: flex;
+            gap: 15px;
+            align-items: flex-end;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .digit-card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 12px;
+            box-shadow: 
+                0 8px 32px rgba(0, 0, 0, 0.1),
+                0 4px 16px rgba(0, 0, 0, 0.05),
+                inset 0 1px 0 rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .digit-card:hover {
+            transform: translateY(-2px);
+        }
+
+        .digit-card:nth-child(1),
+        .digit-card:nth-child(2) {
+            width: 80px;
+            height: 120px;
+        }
+
+        .digit-card:nth-child(3) {
+            width: 80px;
+            height: 140px;
+        }
+
+        .digit-card:nth-child(4) {
+            width: 80px;
+            height: 160px;
+        }
+
+        .digit-card:nth-child(5) {
+            width: 80px;
+            height: 140px;
+        }
+
+        .digit-card:nth-child(6) {
+            width: 80px;
+            height: 120px;
+        }
+
+        .digit {
+            font-size: 48px;
+            font-weight: 700;
+            color: #3182ce;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            font-family: 'Courier New', monospace;
+        }
+
+        .small-numbers {
+            position: absolute;
+            font-size: 12px;
+            color: #cbd5e0;
+            font-weight: 400;
+            opacity: 0.6;
+        }
+
+        .digit-card:nth-child(1) .small-numbers {
+            top: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .digit-card:nth-child(2) .small-numbers {
+            top: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .digit-card:nth-child(3) .small-numbers {
+            top: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .digit-card:nth-child(4) .small-numbers {
+            top: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .digit-card:nth-child(5) .small-numbers {
+            top: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .digit-card:nth-child(6) .small-numbers {
+            top: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .bottom-numbers {
+            position: absolute;
+            bottom: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 12px;
+            color: #cbd5e0;
+            font-weight: 400;
+            opacity: 0.6;
+        }
+
+        @media (max-width: 768px) {
+            .clock-container {
+                gap: 10px;
+            }
+            
+            .digit-card {
+                width: 60px !important;
+            }
+            
+            .digit-card:nth-child(1),
+            .digit-card:nth-child(2) {
+                height: 90px;
+            }
+
+            .digit-card:nth-child(3) {
+                height: 105px;
+            }
+
+            .digit-card:nth-child(4) {
+                height: 120px;
+            }
+
+            .digit-card:nth-child(5) {
+                height: 105px;
+            }
+
+            .digit-card:nth-child(6) {
+                height: 90px;
+            }
+            
+            .digit {
+                font-size: 36px;
+            }
+            
+            .title {
+                font-size: 20px;
+                margin-bottom: 40px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .clock-container {
+                gap: 8px;
+            }
+            
+            .digit-card {
+                width: 50px !important;
+            }
+            
+            .digit {
+                font-size: 28px;
+            }
+            
+            .small-numbers,
+            .bottom-numbers {
+                font-size: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title">Team Section</h1>
+    
+    <div class="clock-container">
+        <div class="digit-card">
+            <div class="small-numbers">1</div>
+            <div class="digit">0</div>
+            <div class="bottom-numbers">2</div>
+        </div>
+        
+        <div class="digit-card">
+            <div class="small-numbers">2</div>
+            <div class="digit">0</div>
+            <div class="bottom-numbers">2</div>
+        </div>
+        
+        <div class="digit-card">
+            <div class="small-numbers">0</div>
+            <div class="digit">2</div>
+            <div class="bottom-numbers">4</div>
+        </div>
+        
+        <div class="digit-card">
+            <div class="small-numbers">1</div>
+            <div class="digit">7</div>
+            <div class="bottom-numbers">5</div>
+        </div>
+        
+        <div class="digit-card">
+            <div class="small-numbers">0</div>
+            <div class="digit">5</div>
+            <div class="bottom-numbers">0</div>
+        </div>
+        
+        <div class="digit-card">
+            <div class="small-numbers">2</div>
+            <div class="digit">7</div>
+            <div class="bottom-numbers">0</div>
+        </div>
+    </div>
+
+    <script>
+        // Optional: Add real-time clock functionality
+        function updateClock() {
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            
+            const timeString = hours + minutes + seconds;
+            const digits = document.querySelectorAll('.digit');
+            
+            for (let i = 0; i < digits.length && i < timeString.length; i++) {
+                digits[i].textContent = timeString[i];
+            }
+        }
+
+        // Uncomment the lines below to enable real-time clock
+        // updateClock();
+        // setInterval(updateClock, 1000);
+    </script>
+</body>
+</html>
+

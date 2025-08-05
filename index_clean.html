@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Section</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 class="title">Team Section</h1>
+    
+    <div class="clock-container">
+        <div class="digit-card">
+            <div class="small-numbers">1</div>
+            <div class="digit">0</div>
+            <div class="bottom-numbers">2</div>
+        </div>
+        
+        <div class="digit-card">
+            <div class="small-numbers">2</div>
+            <div class="digit">0</div>
+            <div class="bottom-numbers">2</div>
+        </div>
+        
+        <div class="digit-card">
+            <div class="small-numbers">0</div>
+            <div class="digit">2</div>
+            <div class="bottom-numbers">4</div>
+        </div>
+        
+        <div class="digit-card">
+            <div class="small-numbers">1</div>
+            <div class="digit">7</div>
+            <div class="bottom-numbers">5</div>
+        </div>
+        
+        <div class="digit-card">
+            <div class="small-numbers">0</div>
+            <div class="digit">5</div>
+            <div class="bottom-numbers">0</div>
+        </div>
+        
+        <div class="digit-card">
+            <div class="small-numbers">2</div>
+            <div class="digit">7</div>
+            <div class="bottom-numbers">0</div>
+        </div>
+    </div>
+
+    <script>
+        // Optional: Add real-time clock functionality
+        function updateClock() {
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            
+            const timeString = hours + minutes + seconds;
+            const digits = document.querySelectorAll('.digit');
+            
+            for (let i = 0; i < digits.length && i < timeString.length; i++) {
+                digits[i].textContent = timeString[i];
+            }
+        }
+
+        // Uncomment the lines below to enable real-time clock
+        updateClock();
+        setInterval(updateClock, 1000);
+    </script>
+</body>
+</html>
+
